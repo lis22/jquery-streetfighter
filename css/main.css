@@ -1,0 +1,66 @@
+body {
+  background-color: black;
+}
+
+.main
+{
+  background-color: white;
+  margin-top: 110px;
+  padding-left: 100px;
+  min-width: 1200px;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.ryu {
+  width: 659px;
+  height: 494px;
+  float: left;
+}
+
+.ryu-ready, .ryu-still, .ryu-throwing {
+  width: 659px;
+  height: 494px;
+}
+
+/*because initially want div.ryu-still to display and these only as
+response to events */
+.ryu-ready, .ryu-throwing {
+  display: none;
+}
+
+.ryu-ready {
+  background-image: url("../images/ryu-ready-position.gif");
+}
+
+.ryu-still {
+  background-image: url("../images/ryu-standing-still.png");
+}
+
+.ryu-throwing {
+  background-image: url("../images/ryu-throwing-hadouken.png");
+}
+
+/* to guarentee background images are not repeated if the div they are in
+is bigger than their dimensions */
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing {
+  background-repeat: no-repeat;
+}
+.hadouken {
+  background-image: url("../images/hadouken.gif");
+  width: 156px;
+  height: 90px;
+
+ display: none;
+
+  /*when you don’t explicitly set the position property on an element,
+  it defaults to static. The left and right properties only work with
+  relatively or absolutely positioned elements. */
+  position: absolute;
+  top: 167px;
+  left: 520px;
+  float: left;
+  postion: absolute;
+  z-index: 10;
+}
