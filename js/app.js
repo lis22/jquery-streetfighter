@@ -75,7 +75,7 @@ $(document).ready(function() {
 
     /* on release of the 'x' key
     Ryu goes into the ready position */
-    .keyup(function(e) { 
+    .keyup(function(e) {
       if (e.which == 88) {
         keypressed=false;
         $('.ryu-cool').hide();
@@ -94,7 +94,7 @@ function playHadouken() {
 //plays street fighter theme
 function playTheme()
 {
-  $('#theme')[0].volume = 1;
+  $('#theme')[0].volume = 0.5;
   $('#theme')[0].load();
   $('#theme')[0].play();
 }
