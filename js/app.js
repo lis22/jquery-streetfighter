@@ -75,7 +75,7 @@ $(document).ready(function() {
 
     /* on release of the 'x' key
     Ryu goes into the ready position */
-    .keyup(function(e) {
+    .keyup(function(e) { 
       if (e.which == 88) {
         keypressed=false;
         $('.ryu-cool').hide();
