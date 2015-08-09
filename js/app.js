@@ -91,7 +91,7 @@ function playHadouken() {
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();
 }
-//plays Ryu theme
+//plays street fighter theme
 function playTheme()
 {
   $('#theme')[0].volume = 1;
