@@ -2,6 +2,7 @@ body {
   background-color: black;
 }
 
+/**************************MAIN DIV *******************************************/
 .main
 {
   background-color: white;
@@ -11,22 +12,27 @@ body {
   height: 500px;
   position: relative;
   z-index: 1;
+  /* background from http://slateman.net/images/gaming/backgrounds/sf/ */
+  background-image: url("../images/bg.gif");
+  background-size: cover;
+  margin-bottom: 10px;
 }
 
+/********************* RELATED TO RYU *****************************************/
 .ryu {
   width: 659px;
   height: 494px;
   float: left;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool  {
   width: 659px;
   height: 494px;
 }
 
 /*because initially want div.ryu-still to display and these only as
 response to events */
-.ryu-ready, .ryu-throwing {
+.ryu-ready, .ryu-throwing, .ryu-cool {
   display: none;
 }
 
@@ -42,17 +48,21 @@ response to events */
   background-image: url("../images/ryu-throwing-hadouken.png");
 }
 
+.ryu-cool {
+  background-image: url("../images/ryu-cool.gif");
+
+}
+
 /* to guarentee background images are not repeated if the div they are in
 is bigger than their dimensions */
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing {
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   background-repeat: no-repeat;
 }
 .hadouken {
   background-image: url("../images/hadouken.gif");
   width: 156px;
   height: 90px;
-
- display: none;
+  display: none;
 
   /*when you don’t explicitly set the position property on an element,
   it defaults to static. The left and right properties only work with
@@ -63,4 +73,58 @@ is bigger than their dimensions */
   float: left;
   postion: absolute;
   z-index: 10;
+}
+/************************WELCOME *********************************************/
+
+.welcome {
+  font-family: "Press Start 2p";
+  font-size: 5em;
+  font-weight: bold;
+  padding-top: 1em;
+
+}
+
+/************************INSTRUCTIONS *****************************************/
+.instructions {
+  padding-top: 3em;
+  display: none;
+
+}
+.instructions h1{
+ font-family: "Press Start 2p";
+ font-size: 2em;
+ font-weight: bold;
+}
+
+.instructions p {
+  font-size: 1em;
+  font-family: "Press Start 2p";
+  font-weight: 200;
+
+}
+/************************FOOTER***********************************************/
+
+footer
+{
+  color: white;
+  min-width: 1200px;
+  text-align: center;
+  font-size: .8em;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a
+{
+  text-decoration: none;
+  color: white;
+}
+
+footer a: hover
+{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
